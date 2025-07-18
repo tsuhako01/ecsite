@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head xmlns:th="www.thymeleaf.olg">
+  <meta charset="UTF-8">
+
+
+  <link href="/css/style.css" rel="stylesheet" />
+  <title>Insert title here</title>
+</head>
+
+<body>
+
+
+  <header>
+    <h1>EC SIte -- 管理者ページ</h1>
+  </header>
+
+  <div id="adminPage">
+    <h2>商品　新規登録</h2>
+    <form name"addGoodsForm" id="addGoodsFrom" method="post" action="/ecsite/admin/addGoods">
+
+      <p>商品名:<input type="text" name="goodsName" /></p>
+      <p>商品:<input type="number" name="price" /></p>
+      <button type="submit">登録</button>
+      <input type="hidden" name="useName" th:value="${userName}" />
+      <input type="hidden" name="password" th:value="${password}"/>
+
+    </form>
+  </div>
+
+</body>
+
+</html>
